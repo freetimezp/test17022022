@@ -1649,3 +1649,14 @@ h1, h2, h3, h4, h5,
   .testimony-39291 .text span {
     font-size: 14px;
     color: #ccc; }
+
+.footer {
+  min-width: 150px;
+  width: 100%;
+  background: #000;
+  text-align: center;
+}
+
+.footer  h4 {
+    color: #fff;
+}
