@@ -12,7 +12,7 @@ $res = $about->fetch(PDO::FETCH_OBJ);
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <img src="images/<?=$res->image;?>" alt="Image" class="img-fluid">
+                <img src="<?=$res->image;?>" alt="Image" class="img-fluid">
             </div>
             <div class="col-md-6">
 
