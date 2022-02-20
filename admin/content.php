@@ -30,14 +30,14 @@ $sql->execute();
             <br>
             <input type="file" name="image">
             <br>
-            <img src="../images/<?=$res->image?>"  alt="image">
+            <img src="../img/<?=$res->image?>"  alt="image">
             <br>
             <input type="submit" name="save" value="save">
         </form>
     <?php endwhile; ?>
 
     <?php else: ?>
-        <?= '<a href="login.php">You must auth! This link to login page.</a>'; ?>
+        <?= '<a href="../login.php">You must auth! This link to login page.</a>'; ?>
     <?php endif; ?>
 </div>
 </body>

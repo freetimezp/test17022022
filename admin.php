@@ -6,16 +6,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin panel</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div>
+    <div class="admin">
         <?php if(!empty($_SESSION['login'])): ?>
-            <?="Hello " . $_SESSION['login'];?>
-        <div>
-            <a href="/logout.php">Logout</a>
+        <div class="admin-login">
+            <p class="admin-title"><?="Hello " . $_SESSION['login'];?></p>
+            <a class="admin-logout" href="logout.php">Logout</a>
         </div>
 
-        <div>
+        <div class="admin-links">
             <a href="admin/contact.php">Contact</a>
             <a href="">Header</a>
             <a href="admin/content.php">Content</a>

@@ -37,7 +37,7 @@ $str = $url[3];
 //echo $str;
 $title = $_POST['title'];
 $price = $_POST['price'];
-$image = '../img/' . $_FILES['image']['name'];
+$image = $_FILES['image']['name'];
 
 $row = "UPDATE content SET title=:title, price=:price , image=:image WHERE id=:id";
 $query = $pdo->prepare($row);

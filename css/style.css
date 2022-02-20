@@ -1660,3 +1660,64 @@ h1, h2, h3, h4, h5,
 .footer  h4 {
     color: #fff;
 }
+
+.admin {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  list-style-type: none;
+}
+
+.admin .admin-login {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.admin .admin-title {
+  font-size: 25px;
+  margin-right: 20px;
+  transition: all 0.6s ease;
+}
+
+.admin .admin-title:hover {
+  transform: rotate(-15deg);
+}
+
+.admin .admin-logout {
+  font-size: 20px;
+  padding: 5px 10px;
+  border: 1px solid #0d0cb5;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+  color: #0d0cb5;
+}
+
+.admin .admin-logout:hover {
+  color: #fff;
+  border: 1px solid #0d0cb5;
+  background: #0d0cb5;
+}
+
+.admin .admin-links{
+  text-align: center;
+}
+
+.admin .admin-links a {
+  font-size: 20px;
+  padding: 2px 5px;
+  border: 1px solid #0d0cb5;
+  border-radius: 5px;
+  transition: all 0.6s ease;
+  color: #fff;
+  background: #0d0cb5;
+  margin-right: 10px;
+}
+
+.admin .admin-links a:hover {
+  background: #fff;
+  color: #0d0cb5;
+}
