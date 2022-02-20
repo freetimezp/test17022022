@@ -18,7 +18,7 @@
         <div>
             <a href="admin/contact.php">Contact</a>
             <a href="">Header</a>
-            <a href="">Content</a>
+            <a href="admin/content.php">Content</a>
             <a href="admin/about.php">About</a>
         </div>
 
