@@ -1677,17 +1677,17 @@ a {
   justify-content: center;
 }
 
-.admin .admin-title {
+.admin .admin-title, .contact .contact-title, .about .about-title {
   font-size: 25px;
   margin-right: 20px;
   transition: all 0.6s ease;
 }
 
-.admin .admin-title:hover {
+.admin .admin-title:hover, .contact .contact-title:hover, .about .about-title:hover {
   transform: rotate(-15deg);
 }
 
-.admin .admin-logout {
+.admin .admin-logout, .contact .contact-logout, .about .about-logout {
   font-size: 20px;
   padding: 5px 10px;
   border: 1px solid #0d0cb5;
@@ -1696,13 +1696,13 @@ a {
   color: #0d0cb5;
 }
 
-.admin .admin-logout:hover {
+.admin .admin-logout:hover, .contact .contact-logout:hover, .about .about-logout:hover {
   color: #fff;
   border: 1px solid #0d0cb5;
   background: #0d0cb5;
 }
 
-.admin .admin-links{
+.admin .admin-links {
   text-align: center;
 }
 
@@ -1721,3 +1721,94 @@ a {
   background: #fff;
   color: #0d0cb5;
 }
+
+.person .content-img {
+  width: 100%;
+  height: 200px;
+}
+
+.header-top .h4 {
+  transition: all 0.6s ease;
+}
+
+.header-top .h4:hover {
+  transform: rotate(-10deg);
+}
+
+.contact, .about {
+  text-align: center;
+}
+
+.contact .contact-block, .about .about-block {
+  display: flex;
+  justify-content: center;
+}
+
+.contact .contact-title, .about .about-title {
+  margin-right: 20px;
+}
+
+.contact .contact-block, .about .about-block {
+  margin-bottom: 20px;
+}
+
+.contact .c-form, .about .c-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact .c-input, .about .c-input {
+  width: 400px;
+  margin-bottom: 20px;
+  padding: 10px 10px 10px 5px;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #0d0cb5;
+  color: #0d0cb5;
+  font-size: 20px;
+  transition: all 0.5s ease;
+}
+
+.contact .c-input:hover, .about .c-input:hover {
+  padding-left: 15px;
+}
+
+.contact .c-btn, .about .c-btn {
+  border: 1px solid #0d0cb5;
+  color: #0d0cb5;
+  padding: 5px 10px;
+  border-radius: 4px;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.contact .c-btn:hover, .about .c-btn:hover {
+  color: #fff;
+  background-color: #0d0cb5;
+}
+
+.about .c-img {
+  text-align: center;
+  width: 500px;
+}
+
+.about .custom-file-upload {
+  border: 1px solid #ccc;
+  display: inline-block;
+  padding: 10px 25px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.5s ease;
+}
+
+.about .custom-file-upload:hover {
+  border: 1px solid #aeacac;
+}
+
+.about .c-input.file {
+  display: none;
+}
+

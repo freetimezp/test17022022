@@ -21,7 +21,7 @@ $res = $data->fetchAll(PDO::FETCH_ASSOC);
                 <div class="col-lg-3 col-md-6 mb-lg-0">
                     <div class="person">
                         <figure>
-                            <img src="images/<?=$item['image'];?>" alt="Image" class="img-fluid">
+                            <img src="img/<?=$item['image'];?>" alt="Image" class="img-fluid content-img">
 
                         </figure>
                         <div class="person-contents">

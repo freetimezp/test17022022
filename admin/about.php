@@ -11,26 +11,34 @@ $res = $sql->fetch(PDO::FETCH_OBJ);
 <head>
     <meta charset="UTF-8">
     <title>Admin panel</title>
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div>
+<div class="about">
     <h1>Edit about info</h1>
     <?php if (!empty($_SESSION['login'])): ?>
 
-        <?= "Hello " . $_SESSION['login']; ?>
-
-        <div>
-            <a href="../logout.php">Logout</a>
+        <div class="about-block">
+            <div class="about-title">
+                <?= "Hello " . $_SESSION['login']; ?>
+            </div>
+            <a class="about-logout" href="../logout.php">Logout</a>
         </div>
-        <form action="editabout.php" method="post" enctype="multipart/form-data">
-            <input type="text" name="title" value="<?= $res->title; ?>">
-            <input type="text" name="description" value="<?= $res->description; ?>">
+
+        <form class="c-form" action="editabout.php" method="post" enctype="multipart/form-data">
+            <input class="c-input" type="text" name="title" value="<?= $res->title; ?>">
+            <input class="c-input" type="text" name="description" value="<?= $res->description; ?>">
             <br>
-            <input type="file" name="image">
+
+            <label for="file" class="custom-file-upload">
+                Choose image...
+            </label>
+            <input class="c-input file" id="file" type="file" name="image"/>
+
             <br>
-            <img src="../images/<?=$res->image?>"  alt="image">
+            <img class="c-img" src="../images/<?=$res->image?>"  alt="image">
             <br>
-            <input type="submit" name="save" value="save">
+            <input class="c-btn" type="submit" name="save" value="save">
         </form>
 
 

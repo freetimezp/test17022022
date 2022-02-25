@@ -32,44 +32,36 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-6 col-lg-3">
-                    <a href="index.php">
+                    <a href="/">
                         <span style="color: black;font-weight: bold">Логотип</span>
                     </a>
                 </div>
                 <div class="col-lg-3 d-none d-lg-block">
-
                     <div class="quick-contact-icons d-flex">
-
                         <div class="text">
                             <span class="h4 d-block"><?=$res['city'];?></span>
-
                         </div>
                     </div>
-
                 </div>
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex">
-
                         <div class="text">
                             <span class="h4 d-block"><?=$res['phone'];?></span>
-
                         </div>
                     </div>
                 </div>
-
                 <div class="col-lg-3 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex">
-
                         <div class="text">
                             <span class="h4 d-block"><?=$res['email'];?></span>
-
                         </div>
                     </div>
                 </div>
 
                 <div class="col-6 d-block d-lg-none text-right">
-                    <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black"><span
-                            class="icon-menu h3"></span></a>
+                    <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
+                        <span class="icon-menu h3"></span>
+                    </a>
                 </div>
             </div>
         </div>
