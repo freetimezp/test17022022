@@ -38,6 +38,7 @@ $res = $sql->fetch(PDO::FETCH_OBJ);
             <br>
             <img class="c-img" src="../images/<?=$res->image?>"  alt="image">
             <br>
+
             <input class="c-btn" type="submit" name="save" value="save">
         </form>
 
