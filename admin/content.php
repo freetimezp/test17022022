@@ -52,16 +52,18 @@ $sql->execute();
                     <div class="modal-content">
                         <span class="c-close">&times;</span>
                         <div>
-                            <form class="c-form" action="editcontent.php/<?=$res->id; ?>" method="post" enctype="multipart/form-data">
+                            <form class="c-form" action="addcontent.php/<?=$res->id; ?>" method="post" enctype="multipart/form-data">
                                 <p>id: <?=$res->id; ?></p>
+                                <label>enter title:</label>
                                 <input class="c-input" type="text" name="title" value="<?= $res->title; ?>">
+                                <label>enter price:</label>
                                 <input class="c-input" type="text" name="price" value="<?= $res->price; ?>">
 
                                 <br>
                                 <label for="file" class="custom-file-upload">
                                     Choose image...
                                 </label>
-                                <input class="c-input file" id="file" type="file" name="image"/>
+                                <input class="input file" id="file" type="file" name="image"/>
                                 <br>
 
                                 <img class="c-img" src="../img/<?=$res->image?>"  alt="image">
