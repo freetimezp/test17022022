@@ -26,19 +26,19 @@ $sql->execute();
 
         <div class="content-form-block">
             <?php while($res = $sql->fetch(PDO::FETCH_OBJ)): ?>
-                <form class="c-form" action="editcontent.php/<?=$res->id; ?>" method="post" enctype="multipart/form-data">
+                <form class="c-form" action="editcontent.php/<?=$res->id;?>" method="post" enctype="multipart/form-data">
                     <p>id: <?=$res->id; ?></p>
-                    <input class="c-input" type="text" name="title" value="<?= $res->title; ?>">
-                    <input class="c-input" type="text" name="price" value="<?= $res->price; ?>">
+                    <input class="c-input" type="text" name="title" value="<?= $res->title;?>">
+                    <input class="c-input" type="text" name="price" value="<?= $res->price;?>">
 
                     <br>
                     <label for="file" class="custom-file-upload">
                         Choose image...
                     </label>
-                    <input class="c-input file" id="file" type="file" name="image"/>
+                    <input class="input file" id="file" type="file" name="image"/>
                     <br>
 
-                    <img class="c-img" src="../img/<?=$res->image?>"  alt="image">
+                    <img class="c-img" src="../img/<?=$res->image;?>"  alt="image">
                     <br>
 
                     <input  class="c-btn" type="submit" name="save" value="save">
@@ -52,12 +52,12 @@ $sql->execute();
                     <div class="modal-content">
                         <span class="c-close">&times;</span>
                         <div>
-                            <form class="c-form" action="addcontent.php/<?=$res->id; ?>" method="post" enctype="multipart/form-data">
+                            <form class="c-form" action="addcontent.php/<?=$res->id;?>" method="post" enctype="multipart/form-data">
                                 <p>id: <?=$res->id; ?></p>
                                 <label>enter title:</label>
-                                <input class="c-input" type="text" name="title" value="<?= $res->title; ?>">
+                                <input class="c-input" type="text" name="title" value="<?= $res->title;?>">
                                 <label>enter price:</label>
-                                <input class="c-input" type="text" name="price" value="<?= $res->price; ?>">
+                                <input class="c-input" type="text" name="price" value="<?= $res->price;?>">
 
                                 <br>
                                 <label for="file" class="custom-file-upload">
@@ -66,7 +66,7 @@ $sql->execute();
                                 <input class="input file" id="file" type="file" name="image"/>
                                 <br>
 
-                                <img class="c-img" src="../img/<?=$res->image?>"  alt="image">
+                                <img class="c-img" src="../img/<?=$res->image;?>"  alt="image">
                                 <br>
 
                                 <input  class="c-btn" type="submit" name="save" value="save">

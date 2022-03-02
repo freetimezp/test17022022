@@ -22,5 +22,6 @@ $res = $sql->fetch(PDO::FETCH_ASSOC);
 <?php
 require 'public/content.php';
 require 'public/about.php';
+require 'public/letter.php';
 require 'public/footer.php';
 ?>

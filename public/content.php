@@ -12,7 +12,7 @@ $res = $data->fetchAll(PDO::FETCH_ASSOC);
         <div class="row justify-content-center mb-5">
             <div class="col-md-7 text-center">
 
-                <h3 style="color: black">Наши услуги</h3>
+                <h3 style="color: black">Products</h3>
             </div>
         </div>
         <div class="row">
@@ -22,7 +22,6 @@ $res = $data->fetchAll(PDO::FETCH_ASSOC);
                     <div class="person">
                         <figure>
                             <img src="img/<?=$item['image'];?>" alt="Image" class="img-fluid content-img">
-
                         </figure>
                         <div class="person-contents">
                             <h3><?=$item['title'];?></h3>

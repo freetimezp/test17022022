@@ -2513,6 +2513,51 @@ a {
     font-size: 25px;
 }
 
-.content {
+.c-form .letter-block {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 0 auto;
+}
 
+.c-form .letter-block input {
+    margin-bottom: 20px;
+    outline: none;
+    border: 2px solid #5958dd;
+    color: #5958dd;
+    padding: 5px 20px 5px 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.letter .row {
+    display: flex;
+    flex-direction: column;
+}
+
+.letter .letter-title {
+    margin-bottom: 40px;
+}
+
+.letter .c-textarea {
+    margin-bottom: 20px;
+    outline: none;
+    border: 2px solid #5958dd;
+    color: #5958dd;
+    border-radius: 5px;
+}
+
+.letter .letter-block input.c-btn {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+    padding: 10px 40px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.letter .letter-block input.c-btn:hover {
+    color: #fff;
+    background-color: #5958dd;
 }
