@@ -2561,3 +2561,7 @@ a {
     color: #fff;
     background-color: #5958dd;
 }
+
+.row .person {
+    margin-bottom: 40px;
+}

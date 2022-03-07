@@ -16,6 +16,8 @@ $array = $sql->fetch(PDO::FETCH_ASSOC);
 if($array['id'] > 0) {
     $_SESSION['login'] = $array['login'];
     header('location: http://test17022022/admin.php');
+    exit();
 }else{
     header('location: http://test17022022/login.php');
+    exit();
 }
