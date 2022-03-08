@@ -14,6 +14,7 @@
         <div class="admin-login">
             <p class="admin-title"><?="Hello " . $_SESSION['login'];?></p>
             <a class="admin-logout" href="logout.php">Logout</a>
+            <a class="mainpagelink" href="/">Go to main page</a>
         </div>
 
         <div class="admin-links">

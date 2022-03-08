@@ -1,5 +1,6 @@
 <?php
 require_once './functions/connect.php';
+session_start();
 
 $main = $pdo->prepare("SELECT * FROM contact");
 $main->execute();
@@ -31,31 +32,40 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
     <div class="header-top bg-light">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-6 col-lg-3">
+                <div class="col-3 col-lg-2">
                     <a href="/">
                         <span style="color: black;font-weight: bold">Логотип</span>
                     </a>
                 </div>
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-2 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex">
                         <div class="text">
                             <span class="h4 d-block"><?=$res['city'];?></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-2 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex">
                         <div class="text">
                             <span class="h4 d-block"><?=$res['phone'];?></span>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-3 d-none d-lg-block">
+                <div class="col-lg-2 d-none d-lg-block">
                     <div class="quick-contact-icons d-flex">
                         <div class="text">
                             <span class="h4 d-block"><?=$res['email'];?></span>
                         </div>
                     </div>
+                </div>
+                <div class="col-lg-1 d-none d-lg-block">
+                    <span class="h4 d-block user-name">
+                        <?php if($_SESSION['login']): ?>
+                            <a href="login.php"><?=$_SESSION['login'];?></a>
+                        <?php else: ?>
+                            <span></span>
+                        <?php endif; ?>
+                    </span>
                 </div>
 
                 <div class="col-6 d-block d-lg-none text-right">

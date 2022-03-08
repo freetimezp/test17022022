@@ -23,6 +23,7 @@ $res = $sql->fetch(PDO::FETCH_OBJ);
                 <?= "Hello " . $_SESSION['login']; ?>
             </div>
             <a class="about-logout" href="../logout.php">Logout</a>
+            <a class="mainpagelink" href="/">Go to main page</a>
         </div>
 
         <form class="c-form" action="editabout.php" method="post" enctype="multipart/form-data">

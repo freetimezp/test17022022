@@ -2545,6 +2545,7 @@ a {
     border: 2px solid #5958dd;
     color: #5958dd;
     border-radius: 5px;
+    padding-left: 10px;
 }
 
 .letter .letter-block input.c-btn {
@@ -2564,4 +2565,29 @@ a {
 
 .row .person {
     margin-bottom: 40px;
+}
+
+.input.file {
+    opacity: 0;
+}
+
+.person .person-contents h3 {
+    min-height: 68px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.mainpagelink {
+    margin: 0 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-top .user-name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0;
 }

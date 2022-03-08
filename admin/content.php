@@ -22,6 +22,7 @@ $sql->execute();
                 <?= "Hello " . $_SESSION['login']; ?>
             </div>
             <a  class="content-logout" href="../logout.php">Logout</a>
+            <a class="mainpagelink" href="/">Go to main page</a>
         </div>
 
         <div class="content-form-block">
@@ -32,10 +33,10 @@ $sql->execute();
                     <input class="c-input" type="text" name="price" value="<?= $res->price;?>">
 
                     <br>
-                    <label for="file" class="custom-file-upload">
+                    <label for="file<?=$res->id;?>" class="custom-file-upload">
                         Choose image...
                     </label>
-                    <input class="input file" id="file" type="file" name="image"/>
+                    <input class="input file" id="file<?=$res->id;?>" type="file" name="image"/>
                     <br>
 
                     <img class="c-img" src="../img/<?=$res->image;?>"  alt="image">

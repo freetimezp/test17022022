@@ -21,6 +21,7 @@ $res = $sql->fetch(PDO::FETCH_OBJ);
         <div class="contact-block">
             <div class="contact-title"><?= "Hello " . $_SESSION['login']; ?></div>
             <a class="contact-logout" href="../logout.php">Logout</a>
+            <a class="mainpagelink" href="/">Go to main page</a>
         </div>
 
         <form class="c-form" action="editcontact.php" method="post">
