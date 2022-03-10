@@ -2591,3 +2591,75 @@ a {
     justify-content: center;
     margin: 0;
 }
+
+.row .addtocart {
+    margin: 20px 0;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px 10px;
+    color: #808080;
+    background-color: #fff;
+    border: 1px solid #808080;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: all 0.6s ease;
+}
+
+.row a.addtocart:hover {
+    color: #fff;
+    background-color: #808080;
+}
+
+.loginsection {
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.loginsection .registration {
+    margin: 30px 0;
+}
+
+.reg-form {
+    text-align: center;
+}
+
+.reg-form h1 {
+    margin-bottom: 30px;
+    letter-spacing: 0.5rem;
+}
+
+.reg-form .c-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #000;
+}
+
+.reg-form .c-input {
+    padding: 10px;
+    font-size: 12px;
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #430a48;
+    color: #430a48;
+    transition: all 0.9s ease;
+    background-color: #fff;
+    min-width: 300px;
+}
+
+.reg-form .c-input:hover {
+    color: #fff;
+    background-color: #430a48;
+}
+
+.reg-form label {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #430a48;
+}

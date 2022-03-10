@@ -27,6 +27,11 @@ $res = $data->fetchAll(PDO::FETCH_ASSOC);
                             <h3><?=$item['title'];?></h3>
                             <span style="color: red;font-weight: bold"><?=$item['price'];?></span>
                         </div>
+                        <?php if($_SESSION['login']): ?>
+                            <a href="../public/addtocart.php?id=<?=$item['id'];?>" class="addtocart">
+                                Add to cart
+                            </a>
+                        <?php endif; ?>
                     </div>
                 </div>
             <?php endforeach; ?>

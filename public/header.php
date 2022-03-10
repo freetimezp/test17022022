@@ -1,5 +1,7 @@
 <?php
 require_once './functions/connect.php';
+require_once './public/addtocart.php';
+
 session_start();
 
 $main = $pdo->prepare("SELECT * FROM contact");
@@ -63,10 +65,17 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
                         <?php if($_SESSION['login']): ?>
                             <a href="login.php"><?=$_SESSION['login'];?></a>
                         <?php else: ?>
-                            <span></span>
+                            <a href="login.php">Enter</a>
                         <?php endif; ?>
                     </span>
                 </div>
+                <div class="col-lg-1 d-none d-lg-block">
+                    <span class="d-block cart">
+                        <a>cart</a>
+                        <span></span>
+                    </span>
+                </div>
+
 
                 <div class="col-6 d-block d-lg-none text-right">
                     <a href="#" class="d-inline-block d-lg-none site-menu-toggle js-menu-toggle text-black">
