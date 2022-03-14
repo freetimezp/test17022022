@@ -1,6 +1,5 @@
 <?php
 require_once './functions/connect.php';
-require_once './public/addtocart.php';
 
 session_start();
 
@@ -19,6 +18,7 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" type="image/png" size="32x32" href="../images/chrome.png">
 </head>
 <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 <div class="site-wrap">
@@ -71,8 +71,12 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
                 </div>
                 <div class="col-lg-1 d-none d-lg-block">
                     <span class="d-block cart">
-                        <a>cart</a>
-                        <span></span>
+                        <button id="get-cart" class="btn btn-primary" data-toggle="modal" data-target="#cart-modal">
+                            cart:
+                            <span class="badge badge-light mini-cart-qty">
+                                <?=$_SESSION['cart.qty'] ? $_SESSION['cart.qty'] : 0;?>
+                            </span>
+                        </button>
                     </span>
                 </div>
 

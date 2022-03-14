@@ -2663,3 +2663,32 @@ a {
     text-transform: uppercase;
     color: #430a48;
 }
+
+#cart-modal .modal-body img {
+    width: 50px;
+    height: 40px;
+}
+
+#content .modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1050;
+    display: none;
+    overflow: hidden;
+    outline: 0;
+}
+
+@media (min-width: 576px) {
+    #content .modal-dialog {
+        max-width: 1000px;
+        margin: 1.75rem auto;
+    }
+}
+
+#content .modal-content {
+    border: 3px solid #90c8ff;
+    box-shadow: 10px 75px 125px rgba(0,0,0,0.5);
+}

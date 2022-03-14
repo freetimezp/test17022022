@@ -7,6 +7,8 @@ $sql = $pdo->prepare("SELECT * FROM header");
 $sql->execute();
 $res = $sql->fetch(PDO::FETCH_ASSOC);
 
+//session_destroy();
+
 ?>
 
     <div class="intro-section" style="background-image: url('images/<?=$res['image'];?>');">
