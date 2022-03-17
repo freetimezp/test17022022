@@ -41,4 +41,10 @@
     <?php endif; ?>
 </div>
 
-<script src="js/main.js"></script>
+<script>
+    $(function () {
+        $('.modal-footer .modal-footer-close').on('click', function() {
+            $('#content .modal').css('display', 'none');
+        });
+    });
+</script>

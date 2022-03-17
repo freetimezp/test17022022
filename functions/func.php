@@ -1,12 +1,13 @@
 <?php
 
-function getProducts() {
-    global $pdo;
-    $res = $pdo->query("SELECT * FROM content");
-    return $res->fetchAll();
-}
+//function get_products() {
+//    global $pdo;
+//    $res = $pdo->query("SELECT * FROM content");
+//    return $res->fetchAll();
+//}
 
-function getProduct($id) {
+function get_product($id) {
+    $id = (int)$id;
     global $pdo;
     $stmt = $pdo->prepare("SELECT * FROM content WHERE id = ?");
     $stmt->execute([$id]);
@@ -27,5 +28,7 @@ function add_to_cart($product) {
 
     $_SESSION['cart.qty'] = !empty($_SESSION['cart.qty']) ? ++$_SESSION['cart.qty'] : 1;
     $_SESSION['cart.sum'] = !empty($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $product['price'] : $product['price'];
+
+    $a = 1;
 }
 

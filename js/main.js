@@ -24,7 +24,7 @@ $(function () {
             success: function (res) {
                 if(res.code == 'ok') {
                     showCart(res.answer);
-                    console.log(res.answer);
+                    //console.log(res.answer);
                 }else{
                     alert ('error');
                 }
@@ -35,11 +35,38 @@ $(function () {
         });
     });
 
-    $('.modal-footer .modal-footer-close').on('click', function() {
-        $('#content .modal').css('display', 'none');
-    })
-
     $('.modal .modal-close').on('click', function() {
         $('#content .modal').css('display', 'none');
-    })
+    });
+
+    $('#get-cart').on('click', function (e) {
+        e.preventDefault();
+
+        $.ajax({
+            url: 'cart.php',
+            type: 'GET',
+            data: { cart: 'show' },
+            success: function (res) {
+                $('#content .modal').css('display', 'block');
+                showCart(res);
+            },
+            error: function () {
+                alert ('error');
+            }
+        });
+    });
+
+    $('#cart-modal .modal-cart-content').on('click', '#clear-cart', function () {
+        $.ajax({
+            url: 'cart.php',
+            type: 'GET',
+            data: { cart: 'clear' },
+            success: function (res) {
+                showCart(res);
+            },
+            error: function () {
+                alert ('error');
+            }
+        });
+    });
 });
