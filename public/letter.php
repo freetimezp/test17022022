@@ -3,7 +3,7 @@
         <div class="row justify-content-center mb-5">
 
             <div class="text-center">
-                <h3 style="color: black" class="letter-title">Send letter</h3>
+                <h3 style="color: black" class="letter-title">Send letter with mail()</h3>
             </div>
 
             <form class="c-form" action="/admin/letter.php" method="post" enctype="multipart/form-data">
@@ -23,3 +23,9 @@
         </div>
     </div>
 </div>
+
+<?php
+    //$body = "<h1>You have new letter!</h1>";
+
+    //var_dump(send_mail($mail_settings_prod, ['kraftukrnet@ukr.net'], 'Test subject', $body));
+?>

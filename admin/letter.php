@@ -23,9 +23,9 @@ if($_POST['send']) {
         $message = $_POST['message'];
 
 
-        $to      = 'kraftukrnet@ukr.net';
+        $to = 'kraftukrnet@ukr.net';
         $subject = 'the subject';
-        $headers = "From: $email . $name . $phone"       . "\r\n" .
+        $headers = "From: $email . $name . $phone" . "\r\n" .
             'Reply-To: kraftukrnet@ukr.net' . "\r\n" .
             'X-Mailer: PHP/' . phpversion();
 

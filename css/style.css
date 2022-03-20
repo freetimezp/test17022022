@@ -2692,3 +2692,20 @@ a {
     border: 3px solid #90c8ff;
     box-shadow: 10px 75px 125px rgba(0,0,0,0.5);
 }
+
+.loginsection .recovery, .loginsection .recovery .row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginsection .recovery input {
+    margin: 10px 0;
+}
+
+
+
+.loginsection .login {
+    margin-bottom: 30px;
+}

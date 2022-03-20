@@ -2,6 +2,9 @@
 require 'public/header.php';
 
 require_once './functions/connect.php';
+require_once __DIR__ . '/vendor/autoload.php';
+require_once __DIR__ . '/functions/func.php';
+require_once __DIR__ . '/functions/conf.php';
 
 $sql = $pdo->prepare("SELECT * FROM header");
 $sql->execute();
