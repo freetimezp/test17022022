@@ -52,7 +52,7 @@ function recover() {
     $res = $pdo->prepare("INSERT INTO recovery (hash, expire, email) VALUES (?, ?, ?)");
     if($res->execute([$hash, $expire, $email])) {
         global $mail_settings_prod;
-        $link = "http://test17022022/recovery.php?key={$hash}";
+        $link = "http://test17022022/public/recovery.php?key={$hash}";
         $body = "This link <a href='{$link}'>{$link}</a> you can change password";
 
         send_mail($mail_settings_prod, [$email], "Recovery password", $body);
@@ -96,3 +96,49 @@ function send_mail(array $mail_settings, array $to, $subject, $body) {
     }
 }
 
+function check_access_new_pass() {
+    $hash = $_GET['key'];
+    return get_user_hash($hash);
+}
+
+function get_user_hash($hash) {
+    global $pdo;
+    $res = $pdo->prepare("SELECT * FROM recovery WHERE hash = ? LIMIT 1");
+    $res->execute([$hash]);
+    $row = $res->fetch();
+
+    $now = time();
+
+    if(!$row || ($row['expire'] - $now < 0)) {
+        $_SESSION['error'] = "Link is old or you have incorrect link";
+        $res = $pdo->prepare("DELETE FROM recovery WHERE expire < ?");
+        $res->execute([$now]);
+        return false;
+    }
+
+    return $row;
+}
+
+function generate_new_pass() {
+    global $pdo;
+    $pass = !empty($_POST['password']) ? trim($_POST['password']) : '';
+    $hash = !empty($_POST['hash']) ? trim($_POST['hash']) : '';
+
+    if(empty($pass)) {
+        $_SESSION['error'] = "Password is required";
+        return false;
+    }
+
+    if(!$row = get_user_hash($hash)) {
+        return false;
+    }
+
+    $res = $pdo->prepare("UPDATE users SET password = ? WHERE email = ?");
+    $res->execute([$pass, $row['email']]);
+
+    $res = $pdo->prepare("DELETE FROM recovery WHERE email = ?");
+    $res->execute([$row['email']]);
+
+    $_SESSION['success'] = "Password change success!";
+        return true;
+}

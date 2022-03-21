@@ -1,7 +1,5 @@
 <?php
 
-define("TIME_ACTIVE_LINK", 60);
-
 $user = "root";
 $password = "";
 $host = "localhost";

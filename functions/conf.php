@@ -1,5 +1,7 @@
 <?php
 
+define("TIME_ACTIVE_LINK", 60);
+
 $mail_settings_dev = [
     'host' => 'smtp.mailtrap.io',
     'auth' => true,
@@ -18,7 +20,7 @@ $mail_settings_prod = [
     'auth' => true,
     'port' => 465,
     'username' => 'kraftukrnet@ukr.net',
-    'password' => 'opMz6b7LiakleNoP',
+    'password' => '111',
     'secure' => 'ssl', // 'tls'
     'charset' => 'UTF-8',
     'from' => 'kraftukrnet@ukr.net',
