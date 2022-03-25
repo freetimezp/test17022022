@@ -1,21 +1,26 @@
 <?php
-require_once '../functions/connect.php';
 
-$msg = '';
+session_start();
+
+require_once '../functions/connect.php';
 
 if($_POST['send']) {
     if(!$_POST['email']) {
-        $msg = 'Please enter email';
-        echo $msg;
+        $_SESSION['error'] = 'Please enter email';
+        header("location: ../index.php#form-send-letter");
+        die;
     }elseif(!$_POST['name']){
-        $msg = 'Please enter name';
-        echo $msg;
+        $_SESSION['error'] = 'Please enter name';
+        header("location: ../index.php#form-send-letter");
+        die;
     }elseif(!$_POST['phone']){
-        $msg = 'Please enter phone';
-        echo $msg;
+        $_SESSION['error'] = 'Please enter phone';
+        header("location: ../index.php#form-send-letter");
+        die;
     }elseif(!$_POST['message']){
-        $msg = 'Please enter message';
-        echo $msg;
+        $_SESSION['errors'] = 'Please enter message';
+        header("location: ../index.php#form-send-letter");
+        die;
     }else{
         $email = $_POST['email'];
         $name = $_POST['name'];
@@ -31,10 +36,10 @@ if($_POST['send']) {
 
         mail($to, $subject, $message, $headers);
 
-        $msg = 'Message send';
-        echo $msg;
+        $_SESSION['sendok'] = 'Message send';
+        header("location: ../index.php#form-send-letter");
+        die;
     }
 }
-
 
 ?>

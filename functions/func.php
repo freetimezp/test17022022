@@ -1,5 +1,42 @@
 <?php
 
+session_start();
+
+function debug($data) {
+    echo '<pre>' . print_r($data, 1) . '</pre>>';
+}
+
+$rules = [
+    'required' => ['email', 'password', 'name', 'code'],
+    'email' => ['email'],
+    'lengthMin' => [
+        ['password', 6]
+    ],
+    'integer' => [
+        ['code']
+    ]
+];
+
+if(!empty($_POST)) {
+    $v = new \Valitron\Validator($_POST);
+    $v->rules($rules);
+    if($v->validate()) {
+        $_SESSION['success'] = 'Validation success';
+    }else{
+        $errors = '<ul>';
+        foreach ($v->errors() as $error) {
+            foreach ($error as $item) {
+                $errors .= "<li>{$item}</li>";
+            }
+        }
+        $errors .= '</ul>';
+
+        $_SESSION['errors'] = $errors;
+    }
+    header("location: index.php#form-validation");
+    die;
+}
+
 function get_products() {
     global $pdo;
     $res = $pdo->query("SELECT * FROM content");
@@ -142,3 +179,5 @@ function generate_new_pass() {
     $_SESSION['success'] = "Password change success!";
         return true;
 }
+
+
