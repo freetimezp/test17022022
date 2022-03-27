@@ -2669,6 +2669,18 @@ a {
     height: 40px;
 }
 
+#get-cart {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+#get-cart .mini-cart-qty {
+    font-size: 14px;
+    padding-right: 0;
+}
+
 #content .modal {
     position: fixed;
     top: 0;
@@ -2721,4 +2733,12 @@ a {
 
 #form-send-letter .alert .btn-close, #form-validation .alert .btn-close {
     max-height: 50px;
+}
+
+#slider {
+    margin-bottom: 40px;
+}
+
+#slider h2 {
+    padding: 40px;
 }

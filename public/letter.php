@@ -21,7 +21,7 @@ session_start();
                                     <?=$_SESSION['error'];?>
                                     <?php unset($_SESSION['error']); ?>
                                 </p>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">x</button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         <?php endif; ?>
 
@@ -31,7 +31,7 @@ session_start();
                                     <?=$_SESSION['sendok'];?>
                                     <?php unset($_SESSION['sendok']); ?>
                                 </p>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">x</button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         <?php endif; ?>
                     </div>

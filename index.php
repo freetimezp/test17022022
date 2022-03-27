@@ -34,6 +34,7 @@ require 'public/header.php';
 require 'public/content.php';
 require 'public/about.php';
 require 'public/letter.php';
+require 'public/slider.php';
 require 'public/formv.php';
 require 'public/footer.php';
 ?>

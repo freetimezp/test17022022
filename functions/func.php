@@ -17,7 +17,7 @@ $rules = [
     ]
 ];
 
-if(!empty($_POST)) {
+if(isset($_POST['validate'])) {
     $v = new \Valitron\Validator($_POST);
     $v->rules($rules);
     if($v->validate()) {

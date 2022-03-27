@@ -18,7 +18,7 @@ session_start();
                                     <?=$_SESSION['errors'];?>
                                     <?php unset($_SESSION['errors']); ?>
                                 </p>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">x</button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         <?php endif; ?>
 
@@ -28,14 +28,14 @@ session_start();
                                     <?=$_SESSION['success'];?>
                                     <?php unset($_SESSION['success']); ?>
                                 </p>
-                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">x</button>
+                                <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
                             </div>
                         <?php endif; ?>
                     </div>
                 </div>
             </div>
 
-            <form class="row g-3" method="post">
+            <form action="" class="row g-3" method="post">
                 <div class="col-md-6 offset-md-3">
                     <div class="form-floating mb-3">
                         <label class="required" for="email-v">Email</label>
@@ -65,7 +65,7 @@ session_start();
                 </div>
 
                 <div class="col-md-6 offset-md-3">
-                    <button type="submit" class="btn btn-danger">send</button>
+                    <button type="submit" name="validate" class="btn btn-danger">send</button>
                 </div>
             </form>
         </div>

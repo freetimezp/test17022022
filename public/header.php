@@ -16,7 +16,8 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
     <meta name="description" content="<?=$res['description'];?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
     <link rel="icon" type="image/png" size="32x32" href="../images/chrome.png">
 </head>
@@ -72,7 +73,7 @@ $res = $main->fetch(PDO::FETCH_ASSOC);
                 <div class="col-lg-1 d-none d-lg-block">
                     <span class="d-block cart">
                         <button id="get-cart" class="btn btn-primary" data-toggle="modal" data-target="#cart-modal">
-                            cart:
+                            <span>cart:</span>
                             <span class="badge badge-light mini-cart-qty">
                                 <?=$_SESSION['cart.qty'] ? $_SESSION['cart.qty'] : 0;?>
                             </span>
